@@ -23,8 +23,7 @@ namespace CPE262PRELIM_MILOS
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
             menuStrip1.Renderer = new FlatMenuRenderer();
             menuStrip1.ForeColor = Color.White;
-            menuStrip1.BackColor = Color.FromArgb(180, 0, 0);
-            fileToolStripMenuItem.DropDown.BackColor = Color.FromArgb(180, 0, 0);
+            fileToolStripMenuItem.DropDown.BackColor = Color.FromArgb(26, 10, 0);
             fileToolStripMenuItem.DropDown.ForeColor = Color.White;
             tabControl1.TabPages[0].Text = "Meals";
             tabControl1.TabPages[1].Text = "Drinks";
@@ -164,13 +163,18 @@ namespace CPE262PRELIM_MILOS
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            about ab=new about();
+
+            about ab = new about();
             ab.Owner = this;
             this.Hide();
             ab.Show();
-            
-            
+
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
@@ -228,9 +232,9 @@ public class FlatMenuRenderer : ToolStripProfessionalRenderer
     {
         // When hovered or selected
         if (e.Item.Selected)
-            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(180, 0, 0)), new Rectangle(Point.Empty, e.Item.Size));
+            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(26, 10, 0)), new Rectangle(Point.Empty, e.Item.Size));
         else
-            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(180, 0, 0)), new Rectangle(Point.Empty, e.Item.Size));
+            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(26, 10, 0)), new Rectangle(Point.Empty, e.Item.Size));
     }
 
     protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
